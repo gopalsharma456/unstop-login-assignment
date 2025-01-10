@@ -1,5 +1,20 @@
 let userData = {};
 
+function checkAuth() {
+  const auth = localStorage.getItem("auth-token");
+  const currentPage = window.location.pathname;
+
+  if (!auth && currentPage.endsWith("home.html")) {
+    window.location.href = "./index.html";
+  }
+
+  if (auth && currentPage.endsWith("index.html")) {
+    window.location.href = "./home.html";
+  }
+}
+
+checkAuth();
+
 document.getElementById("login-form").addEventListener("submit", handleLogin);
 
 function handleLogin(event) {
@@ -61,24 +76,9 @@ function loginRequest() {
     });
 }
 
-function checkAuth() {
-  const auth = localStorage.getItem("auth-token");
-  const currentPage = window.location.pathname;
-
-  if (!auth && currentPage.endsWith("home.html")) {
-    window.location.href = "./index.html";
-  }
-
-  if (auth && currentPage.endsWith("index.html")) {
-    window.location.href = "./home.html";
-  }
-}
-
 function logout() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("auth-token");
     window.location.href = "./index.html";
   }
 }
-
-checkAuth();
