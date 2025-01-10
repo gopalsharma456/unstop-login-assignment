@@ -349,3 +349,54 @@ body {
 
   /* home page css ends */
 }
+
+/* responsive code */
+
+@media (max-width: 1024px) {
+  body {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .image-section {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 50%;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .social-login-buttons {
+        .google-btn,
+        .facebook-btn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .container {
+      min-width: fit-content;
+      .login-section {
+        .social-login-buttons {
+          .google-btn,
+          .facebook-btn {
+          }
+        }
+      }
+    }
+  }
+}
+/* 
+@media (max-width: 768px) {
+  body{
+    .container {
+
+  }
+
+
