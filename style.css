@@ -39,10 +39,10 @@ body {
     padding: 75px 74px;
     display: flex;
     justify-content: space-between;
+    width: fit-content;
 
     .image-section {
       margin: auto 0;
-        
     }
 
     .login-section {
@@ -77,11 +77,12 @@ body {
         .google-btn,
         .facebook-btn {
           display: flex;
-          align-items: center;
           flex-wrap: nowrap;
-          width: 100%;
-          height: 78px;
+          align-items: center;
+          justify-content: center;
           padding: 21px 243px 21px 243px;
+          height: 78px;
+          width: 100%;
           border-radius: 16px;
           border: 1px solid #e2e2e2;
           box-shadow: 0px 4px 14px 0px #0000000d;
@@ -91,23 +92,28 @@ body {
           color: #1c1b1f;
           background-color: #ffffff;
 
-          p {
-            display: inline-block;
-            width: max-content;
+          .text {
+            p {
+              display: inline-block;
+              width: max-content;
+            }
           }
-
-          img {
-            margin-right: 12px;
-            width: 32px;
-            height: 32px;
+          .image {
+            img {
+              margin-right: 12px;
+              width: 32px;
+              height: 32px;
+            }
           }
         }
         .facebook-btn {
           margin-top: 16px;
-          img {
-            margin-right: 12px;
-            width: 16px;
-            height: 32px;
+          .image {
+            img {
+              margin-right: 12px;
+              width: 16px;
+              height: 32px;
+            }
           }
         }
       }
@@ -179,7 +185,7 @@ body {
               outline: none;
               background-color: transparent;
               margin-top: 4px;
-              min-width: 192px;
+              min-width: 250px;
             }
             ::placeholder {
               font-size: 16px;
@@ -349,3 +355,62 @@ body {
 
   /* home page css ends */
 }
+
+/* responsive code */
+
+@media (max-width: 1024px) {
+  body {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .image-section {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 50%;
+          margin-bottom: 2rem;
+        }
+      }
+      .login-section {
+        .heading {
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 16px;
+          
+        }
+      }
+
+      .social-login-buttons {
+        .google-btn,
+        .facebook-btn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .container {
+      min-width: fit-content;
+      .login-section {
+        .social-login-buttons {
+          .google-btn,
+          .facebook-btn {
+          }
+        }
+      }
+    }
+  }
+}
+/* 
+@media (max-width: 768px) {
+  body{
+    .container {
+
+  }
+  }
+} */
