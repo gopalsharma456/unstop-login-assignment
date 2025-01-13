@@ -9,7 +9,7 @@ function checkAuth() {
   }
 
   if (auth && currentPage.endsWith("login.html")) {
-    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/auth/home.html";
+    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/home.html";
   }
 }
 
