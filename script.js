@@ -4,12 +4,12 @@ function checkAuth() {
   const auth = localStorage.getItem("auth-token");
   const currentPage = window.location.pathname;
 
-  if (!auth && currentPage.endsWith("/home.html")) {
-    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/auth/login.html";
+  if (!auth && currentPage.endsWith("/unstop-login-assignment/home.html")) {
+    window.location.href = "/unstop-login-assignment/auth/login.html";
   }
 
-  if (auth && currentPage.endsWith("/auth/login.html")) {
-    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/home.html";
+  if (auth && currentPage.endsWith("/unstop-login-assignment/auth/login.html")) {
+    window.location.href = "/unstop-login-assignment/home.html";
   }
 }
 
