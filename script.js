@@ -5,11 +5,11 @@ function checkAuth() {
   const currentPage = window.location.pathname;
 
   if (!auth && currentPage.endsWith("home.html")) {
-    window.location.href = "/auth/login.html";
+    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/auth/login.html";
   }
 
   if (auth && currentPage.endsWith("/auth/login.html")) {
-    window.location.href = "/home.html";
+    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/home.html";
   }
 }
 
@@ -79,6 +79,6 @@ function loginRequest() {
 function logout() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("auth-token");
-    window.location.href = "/unstop-login-assignment/auth/login.html";
+    window.location.href = "https://gopalsharma456.github.io/unstop-login-assignment/auth/login.html";
   }
 }
