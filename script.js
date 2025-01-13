@@ -9,7 +9,7 @@ function checkAuth() {
   }
 
   if (auth && currentPage.endsWith("login.html")) {
-    window.location.href = "unstop-login-assignment/home.html";
+    window.location.href = "/home.html";
   }
 }
 
